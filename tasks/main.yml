@@ -15,7 +15,7 @@
   when: ansible_pkg_mgr == 'apt'
 
 - name: Create node user
-  user: name=node state=present shell=/bin/false system=yes
+  user: name=node state=present shell=/bin/false system=yes createhome=no
 
 - name: Create log directory
   file: path=/var/log/statsd owner=node group=node state=directory
